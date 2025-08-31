@@ -13,7 +13,8 @@ const apiKey = "9cc4e122504b4b47b09125635253108"; // provided API key
       results.style.display = 'none';
 
       try{
-        const resp = await fetch(`http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${encodeURIComponent(q)}&aqi=yes`);
+        const resp = await fetch(`https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${encodeURIComponent(q)}&aqi=yes`);
+
         if(!resp.ok) throw new Error('Network response was not ok');
         const data = await resp.json();
         // populate
